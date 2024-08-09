@@ -1,0 +1,485 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  font-size: 18px; /* Increase this value to make all text larger */
+  line-height: 1.6; /* Adjust line height for readability */
+}
+
+h1 {
+  font-size: 2.5em; /* 2.5 times the base size */
+}
+
+h2 {
+  font-size: 2em; /* 2 times the base size */
+}
+
+p {
+  font-size: 1.125em; /* Slightly larger than the base size */
+}
+
+
+
+/* Hero Section */
+.hero {
+  background: #214EA2;
+  background-image: url(IMG/hero.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 500px;
+  text-align: center;
+  color: #fff;
+
+  /* Flexbox for centering */
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
+  flex-direction: column; /* Keeps the text and buttons stacked vertically */
+}
+
+.navbar {
+  display: block;
+  align-items: center;
+  background-color: #87CEFA;
+  padding: 10px;
+}
+
+.logo img {
+  height: 80px; /* Adjust based on your logo size */
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+  margin: 0;
+  padding: 10px;
+  list-style: none;
+}
+
+.nav-links li {
+  margin: 0 25px; /* More space between links */
+  padding: 10px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  padding: 10px 15px; /* Adds padding inside each link */
+  border: 2px solid #214EA2; /* Adds a border around the links */
+  border-radius: 5px; /* Rounds the corners of the boxes */
+  background-color: #ffffff; /* Adds a background color */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.nav-links a:hover {
+  background-color: #214EA2; /* Changes background color on hover */
+  color: #ffffff; /* Changes text color on hover */
+}
+
+
+
+/* Container for content inside hero */
+.container {
+  text-align: center;
+  margin-top: 40px; /* More space above container */
+}
+
+.download-btn {
+  background-color: #87CEFA;
+  color: white;
+  text-decoration: none;
+  padding: 15px 30px; /* Larger padding for a prominent button */
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.download-btn:hover {
+   background-color: #000000;
+}
+
+/* How it Works Section */
+.how-it-works {
+  background-color: #f9f9f9;
+  padding: 60px 80px; /* More padding for a spacious look on large screens */
+}
+
+.how-it-works h2 {
+  font-size: 32px; /* Larger font size for headings */
+  color: #214EA2;
+  text-align: center;
+  margin-bottom: 30px; /* More space below heading */
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* Wrap cards if they exceed container width */
+}
+
+.card {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  width: 300px; /* Fixed width for cards */
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effects */
+}
+
+.card:hover {
+  transform: scale(1.05); /* Slightly zoom the card */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+}
+
+.card-image img {
+  width: 100%;
+  height: 200px; /* Adjust based on image aspect ratio */
+  object-fit: cover;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-content h3 {
+  font-size: 24px; /* Larger font size for card titles */
+  color: #214EA2;
+  margin-bottom: 15px; /* More space below title */
+}
+
+.card-content p {
+  font-size: 16px; /* Slightly smaller font size for card text */
+  color: #555;
+  margin-bottom: 20px; /* More space below text */
+}
+
+.card-link {
+  text-decoration: none;
+  color: #87CEFA; /* Light sky blue for links */
+  font-weight: bold;
+}
+
+.card-link:hover {
+  color: #00BFFF; /* Slightly darker blue for hover */
+}
+
+
+/* Mission Section */
+.mission {
+  background-color: #ffffff;
+  padding: 80px 80px; /* Generous padding for large screens */
+}
+
+.mission h2 {
+  font-size: 36px; /* Larger font size for heading */
+  color: #214EA2;
+  text-align: center;
+  margin-bottom: 40px; /* More space below heading */
+}
+
+.mission-intro {
+  font-size: 20px; /* Larger font size for introductory text */
+  color: #333;
+  text-align: center;
+  margin-bottom: 50px; /* More space below intro text */
+  max-width: 1000px; /* Wider max-width for large screens */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mission-details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.mission-item {
+  background-color: #f4f4f4;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 30px; /* Larger padding inside items */
+  margin: 20px; /* More space between items */
+  width: 300px; /* Fixed width for items */
+  text-align: center;
+}
+
+.mission-item h3 {
+  font-size: 28px; /* Larger font size for item titles */
+  color: #214EA2;
+  margin-bottom: 20px; /* More space below title */
+}
+
+.mission-item p {
+  font-size: 18px; /* Larger font size for item text */
+  color: #555;
+}
+
+/* Footer Styles */
+.footer {
+  background-color: #87CEFA;
+  padding: 60px 80px; /* Generous padding for large screens */
+  color: #000000;
+}
+
+.footer .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.footer-section {
+  margin: 20px; /* More space around sections */
+  flex: 1;
+  min-width: 220px; /* Minimum width for footer sections */
+}
+
+.footer-section h4 {
+  margin-bottom: 20px; /* More space below heading */
+  font-size: 20px; /* Larger font size for headings */
+  color: #214EA2;
+}
+
+.footer-section p, .footer-section ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer-section ul {
+  padding-left: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 15px; /* More space between list items */
+}
+
+.footer-section a {
+  text-decoration: none;
+  color: #214EA2;
+}
+
+.footer-section a:hover {
+  text-decoration: underline;
+}
+
+.download-link {
+  display: block;
+  margin-bottom: 15px; /* More space between download links */
+  color: #214EA2;
+}
+
+.social-link {
+  display: inline-block;
+  margin-right: 20px; /* More space between social links */
+  color: #214EA2;
+}
+
+.newsletter form {
+  display: flex;
+  flex-direction: column;
+}
+
+.newsletter input {
+  margin-bottom: 15px; /* More space below input */
+  padding: 15px; /* Larger padding inside input */
+  border: 1px solid #214EA2;
+  border-radius: 4px;
+  color: #000000;
+}
+
+.newsletter button {
+  padding: 15px; /* Larger padding inside button */
+  border: none;
+  border-radius: 4px;
+  background-color: #214EA2;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
+.newsletter button:hover {
+  background-color: #000000;
+}
+
+.footer-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px; /* More space above footer bottom */
+}
+
+.footer-bottom .footer-section {
+  margin: 10px 0; /* Space between footer bottom sections */
+}
+
+/*switcher*/ 
+
+#switcher1 {
+  background-color: #214ea2;
+  padding: 10px;
+  color: #fff;
+  text-align: center;
+}
+
+#switcher1 h2 {
+  font-size: 28px;
+  color: #87CEFA;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#switcher1 .currentItem{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 2fr;
+  gap: 1rem;
+}
+
+.hiddenItem{
+  display: none;
+}
+
+
+#switcherButtons {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+  width: fit-content;
+  margin: 2rem auto;
+}
+
+#switcherButtons button {
+  background-color: #87CEFA; /* Light sky blue for the buttons */
+  color: #000000; /* Black text for readability */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#switcherButtons button:hover {
+  background-color: #00BFFF; /* Slightly darker blue for hover */
+}
+
+/* General Button Styles */
+button {
+  background-color: #87CEFA; /* Light sky blue for general buttons */
+  color: #000000; /* Black text for readability */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #00BFFF; /* Slightly darker blue for hover */
+}
+
+#switcher1 img{
+  grid-row: 1/-1;
+}
+
+#switcher1 h3{
+  grid-column: 2/-1;
+  align-self: end;
+}
+
+/*hidden*/
+
+.sr-only {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+img{
+  display: block;
+  margin: 0 auto;
+  width: 550px;
+  height: 400px
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .nav-links li {
+    margin: 10px 0; /* Space between links on mobile */
+  }
+
+  .download-btn {
+    margin-top: 20px; /* Space between links and button */
+    width: 100%; /* Full width button */
+  }
+}
+
+@media (max-width: 768px) {
+  #switcher1 {
+    padding: 20px;
+  }
+
+  #switcher1 h2 {
+    font-size: 24px;
+  }
+
+  #switcher1 p {
+    font-size: 16px;
+  }
+
+  #switcher1 .currentItem,
+  #switcher1 .hiddenItem {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  #switcher1 img {
+    width: 100%;
+    height: auto;
+  }
+
+  #switcherButtons {
+    grid-template-columns: 1fr;
+    margin: 1rem 0;
+  }
+
+  #switcherButtons button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .download-btn {
+    padding: 10px 20px; /* Adjust padding for mobile */
+    font-size: 14px; /* Smaller font size for mobile */
+    width: 30%; /* Full width button on mobile */
+    margin: 10px 0; /* Margin to separate from other elements */
+    display: block; /* Ensure it takes the full width */
+    text-align: center; /* Center text */
+  }
+}
